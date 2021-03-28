@@ -1,0 +1,25 @@
+# depslib dependency file v1.0
+1616423284 source:c:\users\bapti\onedrive\documents\git\cpp\tp surcharge d'operateur\src\cdate.cpp
+	"CDate.h"
+
+1616422138 c:\users\bapti\onedrive\documents\git\cpp\tp surcharge d'operateur\include\cdate.h
+
+1616422990 source:c:\users\bapti\onedrive\documents\git\cpp\tp surcharge d'operateur\main.cpp
+	<iostream>
+	"CDate.h"
+
+1616700121 source:c:\users\bapti\onedrive\documents\limayrac\git\cpp\tp surcharge d'operateur\main.cpp
+	<iostream>
+	"CDate.h"
+
+1616424852 c:\users\bapti\onedrive\documents\limayrac\git\cpp\tp surcharge d'operateur\include\cdate.h
+
+1616954014 source:c:\users\megaport\documents\limayrac\cpp\tp surcharge d'operateur\main.cpp
+	<iostream>
+	"CDate.h"
+
+1616953900 c:\users\megaport\documents\limayrac\cpp\tp surcharge d'operateur\include\cdate.h
+
+1616953907 source:c:\users\megaport\documents\limayrac\cpp\tp surcharge d'operateur\src\cdate.cpp
+	"CDate.h"
+

@@ -1,0 +1,9 @@
+seconde classique V
+31 decembre 23:59:59 V
+31 mois 31 jours 23:59:59 V
+30 mois 30 jours 23:59:59 V
+28/02 annee non bissextile 23:59:59 V
+29/02 23:59:59 V
+fin d'un jour 23:59:59 
+fin d'une heure xx:59:59
+fin d'une minute xx:xx:59
