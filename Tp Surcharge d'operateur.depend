@@ -23,3 +23,14 @@
 1616953907 source:c:\users\megaport\documents\limayrac\cpp\tp surcharge d'operateur\src\cdate.cpp
 	"CDate.h"
 
+1616956311 source:c:\users\megaport\documents\limayrac\tpsurchargeoperateur\main.cpp
+	<iostream>
+	"CDate.h"
+	<stdio.h>
+	<time.h>
+
+1616955788 c:\users\megaport\documents\limayrac\tpsurchargeoperateur\include\cdate.h
+
+1616955768 source:c:\users\megaport\documents\limayrac\tpsurchargeoperateur\src\cdate.cpp
+	"CDate.h"
+
