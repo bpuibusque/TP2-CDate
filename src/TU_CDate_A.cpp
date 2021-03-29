@@ -75,18 +75,33 @@ int main ()
 //***************************************************************
 void saisirDate(int &j, int &m, int &a, int &s, int &mn, int &h)
 {
-    cout<<"Saisir Jour : "<<endl;
-    cin>>j;
-    cout<<"Saisir Mois : "<<endl;
-    cin>>m;
-    cout<<"Saisir Annee : "<<endl;
-    cin>>a;
-    cout<<"Saisir Heure : "<<endl;
-    cin>>h;
-    cout<<"Saisir Minute : "<<endl;
-    cin>>mn;
-    cout<<"Saisir Secondes : "<<endl;
-    cin>>s;
+    int boucle = 0;
+
+    while(boucle == 0)
+    {
+        cout<<"Saisir Jour, Mois, Annee : "<<endl;
+        cin>>j>>m>>a;
+        cout<<"Saisir Heure, Minute, Seconde: "<<endl;
+        cin>>h>>mn>>s;
+
+        CDate date (j,m,a,h,mn,s);
+
+        if(j < 1 || j > 31 || m < 1 || m > 12)
+        {
+            cout<<"Date invalide veillez entrer une nouvelle date"<<endl;
+        }
+        else if(j > date.jourDansLeMois())
+        {
+            cout<<"Date invalide veillez entrer une nouvelle date"<<endl;
+        }
+        else if( h<1 || h>23 || mn<1 || mn>59 || s<1 || s>59 ){
+            cout<<"Date invalide veillez entrer une nouvelle date"<<endl;
+        }
+        else
+        {
+            boucle = 1;
+        }
+    }
 
 
 }
@@ -125,8 +140,9 @@ void test_constructeur()
 
 void test_constructeurSansParametre()
 {
-
-	// A COMPLETER
+    cout<<endl<<" ----------------------- TEST CONSTRUCTEUR SANS PARAMETRES -----------------------"<<endl;
+	CDate date;
+	afficherDate(date);
 }
 
 //**************************************************************

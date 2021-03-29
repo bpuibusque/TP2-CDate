@@ -22,10 +22,14 @@ class CDate
         // Paramètres d'entrée : jour, mois, annee, heure, minutes, seconde
         CDate(int jour, int mois, int annee, int heure, int minutes, int secondes);
 
+        // Nom : CDate
+        // Role : Constructeur sans parametres
+        CDate();
+
         // Nom : ==
         // Rôle : operateur qui verifie si deux dates sont egales ou non
         // Paramètres d'entrée/sortie : Une date constante passe par reference
-        // Valeur de retour : booleen (true ou false)
+        // Valeur de retour : booleen  TRUE si dates egales FALSE sinon
         bool operator == (const CDate & Date);
 
         // Nom : >

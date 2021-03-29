@@ -10,6 +10,7 @@
 /*************************************************/
 
 #include "../include/CDate.h"
+#include <time.h>
 
 
 // Nom : CDate
@@ -26,10 +27,28 @@ CDate::CDate(int jour, int mois, int annee, int heure, int minutes, int secondes
 
 }
 
+
+
+CDate::CDate(){
+    time_t timestamp;
+    struct tm * t;
+
+    timestamp = time(NULL);
+    t = localtime(&timestamp);
+
+    this->m_jour = t->tm_mday;
+    this->m_mois = 1 + t->tm_mon;
+    this->m_annee = 1900 + t->tm_year;
+    this->m_heure = t->tm_hour;
+    this ->m_minutes = t->tm_min;
+    this->m_secondes = t->tm_sec;
+
+}
+
 // Nom : ==
 // Rôle : operateur qui verifie si deux dates sont egales ou non
 // Paramètres d'entrée/sortie : Une date constante passe par reference
-// Valeur de retour : booleen (true ou false)
+// Valeur de retour : booleen TRUE si dates egales FALSE sinon
 bool CDate::operator == (const CDate & Date){
     bool condition = false;
 
@@ -60,8 +79,9 @@ bool CDate::operator>(const CDate & Date){
        || (this->m_annee == Date.m_annee && this->m_mois == Date.m_mois && this->m_jour == Date.m_jour && this->m_heure == Date.m_heure
            && this->m_minutes == Date.m_minutes && this->m_secondes < Date.m_secondes)){
 
-            return condition;
+            condition = false;
                         }
+    return condition;
 }
 
 //Nom : <
