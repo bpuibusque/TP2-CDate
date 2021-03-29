@@ -37,6 +37,7 @@
 		<Unit filename="../include/CDate.h" />
 		<Unit filename="../src/CDate.cpp" />
 		<Unit filename="../src/TU_CDate.cpp" />
+		<Unit filename="../src/TU_CDate_A.cpp" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
 		</Extensions>

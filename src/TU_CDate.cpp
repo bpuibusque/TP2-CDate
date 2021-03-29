@@ -14,7 +14,7 @@
 
 #include <stdio.h>      /* printf */
 #include <time.h>       /* time_t, time, ctime */
-
+/*
 using namespace std;
 
 int main()
@@ -59,3 +59,4 @@ int main()
 
 
 }
+*/
