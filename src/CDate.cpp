@@ -9,7 +9,7 @@
 // Historique du fichier:
 /*************************************************/
 
-#include "CDate.h"
+#include "../include/CDate.h"
 
 
 // Nom : CDate
@@ -51,13 +51,13 @@ bool CDate::operator == (const CDate & Date){
 bool CDate::operator>(const CDate & Date){
     bool condition = true;
 
-    return((this->m_annee < Date.m_annee)
+    if((this->m_annee < Date.m_annee)
        || (this->m_annee == Date.m_annee && this->m_mois < Date.m_mois)
        || (this->m_annee == Date.m_annee && this->m_mois == Date.m_mois && this->m_jour < Date.m_jour)
-       || (this->m_annee == Date.m_annee && this->m_mois == Date.m_mois && this->m_jour == Date.m_jour && this->m_heures < Date.m_heures)
-       || (this->m_annee == Date.m_annee && this->m_mois == Date.m_mois && this->m_jour == Date.m_jour && this->m_heures == Date.m_heures
+       || (this->m_annee == Date.m_annee && this->m_mois == Date.m_mois && this->m_jour == Date.m_jour && this->m_heure < Date.m_heure)
+       || (this->m_annee == Date.m_annee && this->m_mois == Date.m_mois && this->m_jour == Date.m_jour && this->m_heure == Date.m_heure
            && this->m_minutes < Date.m_minutes)
-       || (this->m_annee == Date.m_annee && this->m_mois == Date.m_mois && this->m_jour == Date.m_jour && this->m_heures == Date.m_heures
+       || (this->m_annee == Date.m_annee && this->m_mois == Date.m_mois && this->m_jour == Date.m_jour && this->m_heure == Date.m_heure
            && this->m_minutes == Date.m_minutes && this->m_secondes < Date.m_secondes)){
 
             return condition;
@@ -75,41 +75,15 @@ bool CDate::operator<(const CDate & Date){
     if((this->m_annee < Date.m_annee)
        || (this->m_annee == Date.m_annee && this->m_mois > Date.m_mois)
        || (this->m_annee == Date.m_annee && this->m_mois == Date.m_mois && this->m_jour > Date.m_jour)
-       || (this->m_annee == Date.m_annee && this->m_mois == Date.m_mois && this->m_jour == Date.m_jour && this->m_heures > Date.m_heures)
-       || (this->m_annee == Date.m_annee && this->m_mois == Date.m_mois && this->m_jour == Date.m_jour && this->m_heures == Date.m_heures && this->m_minutes > Date.m_minutes)
-       || (this->m_annee == Date.m_annee && this->m_mois == Date.m_mois && this->m_jour == Date.m_jour && this->m_heures == Date.m_heures && this->m_minutes == Date.m_minutes && this->m_secondes > Date.m_secondes)){
+       || (this->m_annee == Date.m_annee && this->m_mois == Date.m_mois && this->m_jour == Date.m_jour && this->m_heure > Date.m_heure)
+       || (this->m_annee == Date.m_annee && this->m_mois == Date.m_mois && this->m_jour == Date.m_jour && this->m_heure == Date.m_heure && this->m_minutes > Date.m_minutes)
+       || (this->m_annee == Date.m_annee && this->m_mois == Date.m_mois && this->m_jour == Date.m_jour && this->m_heure == Date.m_heure && this->m_minutes == Date.m_minutes && this->m_secondes > Date.m_secondes)){
         condition = false;
 
     return condition;
 
-}
-}
-
-
-// Nom : <
-// Rôle : operateur qui verifie si une date est inferieure a une autre ou pas
-// Paramètres d'entrée/sortie : Une date constante passe par reference
-// Valeur de retour : booleen (true ou false)
-bool CDate:: operator < (const CDate & Date){
-    bool condition = true;
-
-    if(this->m_annee > Date.m_annee){
-        condition = false;
-    }else if(this->m_mois > Date.m_mois){
-        condition = false;
-    }else if(this->m_jour > Date.m_jour){
-        condition = false;
-    }else if(this->m_heure > Date.m_heure){
-        condition = false;
-    }else if(this->m_minutes > Date.m_minutes){
-        condition = false;
-    }else if(this->m_secondes > Date.m_secondes){
-        condition = false;
     }
-
-    return condition;
 }
-
 
 // Nom : getDate
 // Rôle : attribue a des valeurs par reference les attributs de la date courante
@@ -122,7 +96,6 @@ void CDate::getDate(int &jour, int &mois, int &annee, int &heure, int &minute, i
     minute = this ->m_minutes;
     seconde = this->m_secondes;
 }
-
 
 // Nom : anneeBisextile
 // Rôle : renvoie true si l'annee de la date courante est bisextile et false sinon

@@ -34,9 +34,9 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
-		<Unit filename="TU_CDate.cpp" />
-		<Unit filename="include/CDate.h" />
-		<Unit filename="src/CDate.cpp" />
+		<Unit filename="../include/CDate.h" />
+		<Unit filename="../src/CDate.cpp" />
+		<Unit filename="../src/TU_CDate.cpp" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
 		</Extensions>

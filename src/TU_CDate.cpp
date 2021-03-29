@@ -10,7 +10,7 @@
 /*************************************************/
 
 #include <iostream>
-#include "CDate.h"
+#include "../include/CDate.h"
 
 #include <stdio.h>      /* printf */
 #include <time.h>       /* time_t, time, ctime */
@@ -19,7 +19,7 @@ using namespace std;
 
 int main()
 {
-    CDate date1(12,04,2021,18,45,12);
+    CDate date1(28,02,2021,18,45,12);
     CDate date2(28,02,2021,22,45,12);
 
     if(date1==date2){
@@ -46,6 +46,15 @@ int main()
     date1.getDate(jour,mois,annee,heure,minute,seconde);
 
     cout<<"date 1 :"<<jour<<'/'<<mois<<'/'<<annee<<' '<<heure<<':'<<minute<<':'<<seconde<<endl;
+
+    while(true){
+        date1.operator++();
+
+    date1.getDate(jour,mois,annee,heure,minute,seconde);
+
+    cout<<"date 1 :"<<jour<<'/'<<mois<<'/'<<annee<<' '<<heure<<':'<<minute<<':'<<seconde<<endl;
+
+    }
 
 
 
