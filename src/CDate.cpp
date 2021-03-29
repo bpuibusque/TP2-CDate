@@ -43,29 +43,46 @@ bool CDate::operator == (const CDate & Date){
 
 }
 
-// Nom : >
-// Rôle : operateur qui verifie si une date est superieure a une autre ou pas
-// Paramètres d'entrée/sortie : Une date constante passe par reference
-// Valeur de retour : booleen (true ou false)
-bool CDate:: operator > (const CDate & Date){
+
+//Nom : >
+//Rôle : Compare deux dates(infériorité)
+//Paramètres entree/sortie : date constante par ref
+//Retour : booleen
+bool CDate::operator>(const CDate & Date){
     bool condition = true;
 
-    if(this->m_annee < Date.m_annee){
+    return((this->m_annee < Date.m_annee)
+       || (this->m_annee == Date.m_annee && this->m_mois < Date.m_mois)
+       || (this->m_annee == Date.m_annee && this->m_mois == Date.m_mois && this->m_jour < Date.m_jour)
+       || (this->m_annee == Date.m_annee && this->m_mois == Date.m_mois && this->m_jour == Date.m_jour && this->m_heures < Date.m_heures)
+       || (this->m_annee == Date.m_annee && this->m_mois == Date.m_mois && this->m_jour == Date.m_jour && this->m_heures == Date.m_heures
+           && this->m_minutes < Date.m_minutes)
+       || (this->m_annee == Date.m_annee && this->m_mois == Date.m_mois && this->m_jour == Date.m_jour && this->m_heures == Date.m_heures
+           && this->m_minutes == Date.m_minutes && this->m_secondes < Date.m_secondes)){
+
+            return condition;
+                        }
+}
+
+//Nom : <
+//Rôle : Compare deux dates(infériorité)
+//Paramètres entree/sortie : date constante par ref
+//Retour : booleen
+
+bool CDate::operator<(const CDate & Date){
+    bool condition = true;
+
+    if((this->m_annee < Date.m_annee)
+       || (this->m_annee == Date.m_annee && this->m_mois > Date.m_mois)
+       || (this->m_annee == Date.m_annee && this->m_mois == Date.m_mois && this->m_jour > Date.m_jour)
+       || (this->m_annee == Date.m_annee && this->m_mois == Date.m_mois && this->m_jour == Date.m_jour && this->m_heures > Date.m_heures)
+       || (this->m_annee == Date.m_annee && this->m_mois == Date.m_mois && this->m_jour == Date.m_jour && this->m_heures == Date.m_heures && this->m_minutes > Date.m_minutes)
+       || (this->m_annee == Date.m_annee && this->m_mois == Date.m_mois && this->m_jour == Date.m_jour && this->m_heures == Date.m_heures && this->m_minutes == Date.m_minutes && this->m_secondes > Date.m_secondes)){
         condition = false;
-    }else if(this->m_mois < Date.m_mois){
-        condition = false;
-    }else if(this->m_jour < Date.m_jour){
-        condition = false;
-    }else if(this->m_heure < Date.m_heure){
-        condition = false;
-    }else if(this->m_minutes < Date.m_minutes){
-        condition = false;
-    }else if(this->m_secondes < Date.m_secondes){
-        condition = false;
-    }
 
     return condition;
 
+}
 }
 
 
