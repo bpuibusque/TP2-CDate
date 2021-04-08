@@ -1,9 +1,12 @@
 //********************************************************
 // Auteur : MP Pinaud
-// date : 19/03/2021
+// date de creation : 19/03/2021
 // fichier: TU_CDate.cpp
+// Programmeur : Baptiste PUIBUSQUE
+// Version 1.0
+// date de code : 01/04/2021
 // Programme de test unitaire de la classe CDate
-// Difficulté A
+// DifficultÃ© A
 //********************************************************
 #include <iostream>
 using namespace std;
@@ -61,8 +64,8 @@ int main ()
 	}while(rep!=0);
 
 
-	// Coder un menu pour que l'utilisateur choisisse la méthode qu'il veut tester
-	// L'utilisateur pourra lancer plusieurs tests à la suite.
+	// Coder un menu pour que l'utilisateur choisisse la mÃ©thode qu'il veut tester
+	// L'utilisateur pourra lancer plusieurs tests Ã  la suite.
 	// L'utilisateur saisira 0 pour sortir.
 
 	return 0;
@@ -70,8 +73,8 @@ int main ()
 
 //**************************************************************
 // Fonction:saisirDate
-// Rôle :	permet de saisir les informations d'une date
-// Paramètres de sortie : le jour, mois, année, secondes, minutes, heures saisies
+// RÃ´le :	permet de saisir les informations d'une date
+// ParamÃ¨tres de sortie : le jour, mois, annÃ©e, secondes, minutes, heures saisies
 //***************************************************************
 void saisirDate(int &j, int &m, int &a, int &s, int &mn, int &h)
 {
@@ -107,8 +110,8 @@ void saisirDate(int &j, int &m, int &a, int &s, int &mn, int &h)
 }
 //**************************************************************
 // Fonction:afficherDate
-// Rôle :	affiche la date passée en paramètre
-// Paramètre d'entrée : la date à afficher
+// RÃ´le :	affiche la date passÃ©e en paramÃ¨tre
+// ParamÃ¨tre d'entrÃ©e : la date Ã  afficher
 //***************************************************************
 void afficherDate (CDate &d)
 {
@@ -121,7 +124,7 @@ void afficherDate (CDate &d)
 
 //**************************************************************
 // Fonction:test_constructeur
-// Rôle :	teste le constructeur et affiche la date  à l'aide des méthodes d'accès
+// RÃ´le :	teste le constructeur et affiche la date  Ã  l'aide des mÃ©thodes d'accÃ¨s
 //***************************************************************
 
 void test_constructeur()
@@ -135,7 +138,7 @@ void test_constructeur()
 
 //**************************************************************
 // Fonction:test_constructeur
-// Rôle :	teste le constructeur sans paramètre de la classe CDate
+// RÃ´le :	teste le constructeur sans paramÃ¨tre de la classe CDate
 //***************************************************************
 
 void test_constructeurSansParametre()
@@ -147,7 +150,7 @@ void test_constructeurSansParametre()
 
 //**************************************************************
 // Fonction:test_egal
-// Rôle :	teste de l'opérateur == de la classe CDate
+// RÃ´le :	teste de l'opÃ©rateur == de la classe CDate
 //***************************************************************
 void test_egal()
 {
@@ -178,7 +181,7 @@ void test_egal()
 
 //**************************************************************
 // Fonction:test_sup
-// Rôle :	teste de l'opérateur >  de la classe CDate
+// RÃ´le :	teste de l'opÃ©rateur >  de la classe CDate
 //***************************************************************
 
 void test_sup()
@@ -210,7 +213,7 @@ void test_sup()
 
 //**************************************************************
 // Fonction:test_inf
-// Rôle :	teste l'opérateur < de la classe CDate
+// RÃ´le :	teste l'opÃ©rateur < de la classe CDate
 //***************************************************************
 
 void test_inf()
@@ -241,7 +244,7 @@ void test_inf()
 
 //**************************************************************
 // Fonction:test_incrementerSec
-// Rôle :	teste la  méthode incrémenterSec de la classe CDate
+// RÃ´le :	teste la  mÃ©thode incrÃ©menterSec de la classe CDate
 //***************************************************************
 void test_incrementerSec()
 {
